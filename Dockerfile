@@ -1,13 +1,22 @@
-FROM ubuntu
-FROM python:latest
+FROM continuumio/miniconda3
 
-RUN apt-get update
-RUN pip install pandas matplotlib
+RUN mkdir desafio1
+WORKDIR /desafio1
 
-ADD utm_graph.py /Users/lucasmeireles/Desktop/globotech/desafio1/utm_graph.py
-ADD coordinates_new.csv /Users/lucasmeireles/Desktop/globotech/desafio1/coordinates_new.csv
-ADD coordinates_old.csv /Users/lucasmeireles/Desktop/globotech/desafio1/coordinates_old.csv
+# Create the environment:
+COPY environment.yml .
+COPY coordinates_new.csv .
+COPY coordinates_old.csv .
+RUN conda env create -f environment.yml
 
 
-CMD ["/Users/lucasmeireles/Desktop/globotech/desafio1/utm_graph.py"]
-ENTRYPOINT ["python"]
+# Override default shell and use bash
+SHELL ["conda", "run", "-n", "env", "/bin/bash", "-c"]
+
+# Activate Conda environment and check if it is working properly
+RUN python -c "import pandas"
+RUN python -c "import matplotlib"
+
+# The code to run when container is started:
+COPY utm_graph.py .
+ENTRYPOINT ["conda", "run", "-n", "env", "python", "utm_graph.py"]
