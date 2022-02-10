@@ -1,0 +1,14 @@
+prefix=/Users/lucasmeireles/Desktop/globotech/desafio1/env
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/qt
+
+
+Name: Qt5 OpenGLExtensions
+Description: Qt OpenGLExtensions module
+Version: 5.9.7
+Libs: -L${libdir} -lQt5OpenGLExtensions 
+Libs.private: -L/Users/lucasmeireles/Desktop/globotech/desafio1/env/lib -L/Users/lucasmeireles/Desktop/globotech/desafio1/env/lib -lQt5Gui -framework DiskArbitration -framework IOKit -lQt5Core -framework OpenGL -framework AGL 
+Cflags: -I${includedir}/QtOpenGLExtensions -I${includedir}
+Requires: Qt5Core Qt5Gui
+

@@ -1,0 +1,41 @@
+{
+  "build": "py39h4b4dc7a_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-64",
+  "constrains": [],
+  "depends": [
+    "blas 1.0 mkl",
+    "mkl >=2021.3.0,<2022.0a0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "mkl_fft",
+    "mkl_random",
+    "numpy-base 1.21.2 py39he0bd621_0",
+    "python >=3.9,<3.10.0a0"
+  ],
+  "extracted_package_dir": "/Users/lucasmeireles/opt/miniconda3/pkgs/numpy-1.21.2-py39h4b4dc7a_0",
+  "features": "",
+  "files": [],
+  "fn": "numpy-1.21.2-py39h4b4dc7a_0.conda",
+  "legacy_bz2_md5": "6753c4889b650727499354243828e46e",
+  "legacy_bz2_size": 22602,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "/Users/lucasmeireles/opt/miniconda3/pkgs/numpy-1.21.2-py39h4b4dc7a_0",
+    "type": 1
+  },
+  "md5": "1893b79a1057960e4f5d9d7d4cff1382",
+  "name": "numpy",
+  "package_tarball_full_path": "/Users/lucasmeireles/opt/miniconda3/pkgs/numpy-1.21.2-py39h4b4dc7a_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "numpy==1.21.2=py39h4b4dc7a_0",
+  "sha256": "253dd47b0c8c0b01b32221e5b6653a62e47adb92b2d3fa661a8f136914f348ad",
+  "size": 23541,
+  "subdir": "osx-64",
+  "timestamp": 1634107172627,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/osx-64/numpy-1.21.2-py39h4b4dc7a_0.conda",
+  "version": "1.21.2"
+}
